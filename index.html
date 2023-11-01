@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snippet</title>
+</head>
+
+<body>
+    <div id="box">
+        <button onclick="startCounting()">start click</button>
+        <p id="count"></p>
+    </div>
+
+    <script>
+    function startCounting() {
+        let countElement = document.getElementById("count");
+        let i = 1;
+        countElement.innerHTML = "";
+        let interval = setInterval(() => {
+            countElement.innerHTML += i + "<br>";
+            i++;
+            if (i > 10) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+    </script>
+</body>
+
+</html>
